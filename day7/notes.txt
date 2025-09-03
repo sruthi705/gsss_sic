@@ -1,0 +1,192 @@
+import pymysql
+
+def connect_db():
+    try:
+        conn = pymysql.Connect(host='localhost', user='root', 
+        password='Root123', database='mtd_db', port=3306)
+        print('Database connected')
+        return conn
+    except:
+        print('Database connection failed')
+
+def disconnect_db(connection):
+    if connection:
+        connection.close()
+        print('Database disconnected')
+----------------------------------------------------------
+import db_connect as db
+
+def read_employee_details():
+    name = input('Enter employee name: ')
+    designation = input('Enter employee designation: ')
+    phone_number = input('Enter employee phone_number: ')
+    commisssion = input('Enter employee commisssion: ')
+    salary = input('Enter employee salary: ')
+    years_of_exp = input('Enter employee years_of_exp: ')
+    location = input('Enter employee location: ')
+    return (name, designation, phone_number, commisssion, salary, years_of_exp, location)
+
+def create_row():
+    employee = read_employee_details()
+    query = 'insert into employees(name, designation, phone_number, commission, salary, years_of_exp, location) values(%s, %s, %s, %s, %s, %s, %s)'
+    connection = db.connect_db()
+    cursor = connection.cursor()
+    count = cursor.execute(query, employee)
+    connection.commit()
+    cursor.close()
+    db.disconnect_db(connection)
+    if count == 1:
+        print('Row inserted')
+    else:
+        print('Row insertion failed')
+
+def update_row():
+    query = 'update employees set location = %s, salary = %s where id = %s'
+    salary = float(input('Enter the new salary to be updated: '))
+    location = input('Enter new location of employee: ')
+    id =  int(input('Enter id of employee to update details: '))
+    connection = db.connect_db()
+    cursor = connection.cursor()
+    count = cursor.execute(query, (location, salary, id))
+    connection.commit()
+    cursor.close()
+    db.disconnect_db(connection)
+    if count == 1:
+        print('Row updated')
+    else:
+        print('Row updation failed')
+
+def delete_row():
+    id =  int(input('Enter id of employee to update details: '))
+    query = f'delete from employees where id = {id}'
+    connection = db.connect_db()
+    cursor = connection.cursor()
+    count = cursor.execute(query)
+    connection.commit()
+    cursor.close()
+    db.disconnect_db(connection)
+    if count == 1:
+        print('Row deleted')
+    else:
+        print('Row deletion failed')
+
+def search_row():
+    id =  int(input('Enter the employee Id to search:'))
+    query = f'select * from employees where id = {id}'
+    connection = db.connect_db()
+    cursor = connection.cursor()
+    cursor.execute(query)
+    row = cursor.fetchone()
+    if row:
+        print(f'Employee details are {row}')
+    else:
+        print(f'Employee with Id = {id} not found')
+    cursor.close()
+    db.disconnect_db(connection)
+    
+def list_all_rows():
+    query = 'select * from employees'
+    connection = db.connect_db()
+    cursor = connection.cursor()
+    cursor.execute(query)
+    rows = cursor.fetchall()
+    if rows:
+        print('List of all Employees:')
+        for row in rows:
+            print(row)
+    elif len(rows) == 0:
+        print('No employee records found')
+    else:
+        print('Fetching all rows failed')
+    cursor.close()
+    db.disconnect_db(connection)
+
+def create_table():
+    query = ''' create table IF NOT EXISTS employees(
+	id int auto_increment primary key,
+	name varchar(50) not null,
+	designation	varchar(50),
+	phone_number bigint	unique not null,
+	commission float default(0),
+	salary float check(salary >= 15000),
+	years_of_exp tinyint,
+	location varchar(50) );  '''
+    connection = db.connect_db()
+    try:
+        cursor = connection.cursor()
+        cursor.execute(query)
+        cursor.close()
+        db.disconnect_db(connection)
+    except:
+        print('Table creation failed')
+
+def create_database():
+    db_name = input('Enter the database name you wish to create: ')
+    query = f'create database if not exists {db_name}'
+    connection = db.connect_db()
+    try:
+        cursor = connection.cursor()
+        cursor.execute(query)
+        cursor.close()
+        db.disconnect_db(connection)
+    except:
+        print('database creation failed')
+
+list_all_rows()
+------------------------------------------------------------------
+login and logout("idea how it works")
+----------------
+mysql intallation
+
+Steps to Download MySql:
+
+3. Download MySQL  ->  mysql.com/downloads
+-> MySQL Community GPL Downloads 
+-> MySQL Installer for Windows 
+-> No thanks start my download
+Note: Download the Latest version (8.0.3) and the Bigger Sized File (330 MB or so)
+
+Steps to Install MySQL:
+Choose Setup type as Custom -> Click Next
+MySql Server + Mysql WorkBench + MySql Shell (Drag all these to right)
+Do not select the check box -> Click Next
+Click on Execute (Make sure that all 3 Apps are visible in "Installation") -> Click Next
+Type and Networking -> Click Next
+Product Config -> click Next -> Port Number is shown -> Click Next
+Use Strong Password -> Click Next
+Set the Password (Remember it) -> Click Next
+Windows Service -> Click Next
+Server File Permissions -> Click Next
+Apply Config -> Click Execute
+Successful Message -> Click Finish 
+Product Config -> Click Next
+Installation Complete -> Click Finish
+Workbench Runs
+Go to MysQl Folder -> server folder -> bin (Add path to Environment Vars)
+
+cmd -> mysql --version
+
+mysql -u root -p   (To force the mysql to prompt for password)
+
+show databases;  // run this command
+create database db1;
+----------------------------------------------
+Use the command "pip list" to list all the installed python modules
+
+Use the below command to install pymysql module:
+pip install pymysql
+
+----------------------------------------------------------------
+BINARY SEARCH:
+
+def binary_search(array, element):
+    low = 0
+    high = len(array)-1
+    while low <= high:
+        mid = (low + high) // 2
+        if element == array[mid]:
+            return mid
+        elif element < array[mid]:
+            high = mid - 1
+        else:
+            low = mid + 1
