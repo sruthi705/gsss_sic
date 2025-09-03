@@ -1,0 +1,243 @@
+{
+    "avg_purchase": 993.6,
+    "top_products": [
+        {
+            "ProductID": "P601",
+            "Quantity": 77
+        },
+        {
+            "ProductID": "P701",
+            "Quantity": 24
+        },
+        {
+            "ProductID": "P702",
+            "Quantity": 3
+        },
+        {
+            "ProductID": "P704",
+            "Quantity": 3
+        },
+        {
+            "ProductID": "P803",
+            "Quantity": 3
+        }
+    ],
+    "top_customers": [
+        {
+            "CustomerID": "C131",
+            "TotalAmount": 3900.0
+        },
+        {
+            "CustomerID": "C114",
+            "TotalAmount": 3600.0
+        },
+        {
+            "CustomerID": "C139",
+            "TotalAmount": 2600.0
+        },
+        {
+            "CustomerID": "C110",
+            "TotalAmount": 2500.0
+        },
+        {
+            "CustomerID": "C127",
+            "TotalAmount": 2400.0
+        }
+    ],
+    "customer_frequency": [
+        {
+            "CustomerID": "C101",
+            "Frequency": 4
+        },
+        {
+            "CustomerID": "C102",
+            "Frequency": 4
+        },
+        {
+            "CustomerID": "C103",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C104",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C105",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C106",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C107",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C108",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C109",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C110",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C111",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C112",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C113",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C114",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C115",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C116",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C117",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C118",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C119",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C120",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C121",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C122",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C123",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C124",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C125",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C126",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C127",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C128",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C129",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C130",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C131",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C132",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C133",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C134",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C135",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C136",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C137",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C138",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C139",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C140",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C141",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C142",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C143",
+            "Frequency": 1
+        },
+        {
+            "CustomerID": "C144",
+            "Frequency": 1
+        }
+    ],
+    "category_revenue": [
+        {
+            "ProductCategory": "Furniture",
+            "TotalAmount": 25600.0
+        },
+        {
+            "ProductCategory": "Electronics",
+            "TotalAmount": 17150.0
+        },
+        {
+            "ProductCategory": "Clothing",
+            "TotalAmount": 5390.0
+        },
+        {
+            "ProductCategory": "Grocery",
+            "TotalAmount": 1540.0
+        }
+    ]
+}

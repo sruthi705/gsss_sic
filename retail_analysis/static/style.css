@@ -1,0 +1,135 @@
+/* =======================
+   General Body
+======================= */
+body {
+    background-color: #cbcdd3;  /* light gray background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:16px;
+    color:#ffffff;
+    background-color: f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* =======================
+   Dashboard Header
+======================= */
+.dashboard-header {
+    background-color: #2a2a2a;
+    border: 2px solid #333;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+}
+.dashboard-container {
+    width: 100%;
+    max-width: 1700px;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+/* =======================
+   Cards (KPIs)
+======================= */
+.card {
+    background-color: #0d0c0c;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(128, 136, 134, 0.5);
+    padding:20px;
+    transition: transform 0.2s;
+    color:#ffffff;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* =======================
+   Table Styling
+======================= */
+.table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
+.table-container {
+    max-height: 300px; 
+    width:100%;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+.table thead {
+    background-color: #111111;
+    color: #ffffff;
+    font-weight: 600;
+    text-align: center;
+}
+.table thead th {
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    color: #000 !important;
+}
+
+/* --- ONLY Revenue by Category headings white --- */
+body > div > div:nth-child(6) thead th {
+    color: white !important;
+    font-weight: bold !important;
+    text-align: center;
+}
+
+table.table tbody tr td:first-child {
+    font-size: 1.3rem !important;
+    font-weight: bold !important;
+    color: #000 !important;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #262626;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #333333 !important;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* =======================
+   Table cells
+======================= */
+.table th, td {
+    font-size: 1.1rem !important;
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* =======================
+   KPIs Text
+======================= */
+h6 {
+    font-weight:600;
+    color: #cccccc;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin: 0;
+}
+
+/* =======================
+   Responsive Tables
+======================= */
+@media (max-width: 768px) {
+    .table-responsive {
+        overflow-x: auto;
+    }
+}
